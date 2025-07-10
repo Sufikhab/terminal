@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <dirent.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <sys/types.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+#include<dirent.h>
+#include<unistd.h>
+#include<sys/stat.h>
+#include<sys/types.h>
 
 void sfunc_ls(char *args)
 {
@@ -104,6 +104,7 @@ void sfunc_mkdir(char *args)
         perror("error creating directory");
     }
 }
+
 void sfunc_cd(char *args)
 {
     if (!args)
@@ -117,6 +118,7 @@ void sfunc_cd(char *args)
         return;
     }
 }
+
 void sfunc_whereami(char *args)
 {
     char cwd[1024];
@@ -128,6 +130,10 @@ void sfunc_whereami(char *args)
     {
         perror("error getting current directory");
     }
+}
+
+void sfunc_exit(char *args) {
+    int running = 1;
 }
 
 typedef struct
@@ -145,4 +151,7 @@ Command captian[] = {
     {"show", sfunc_show},
     {"ls", sfunc_ls},
     {"whereami", sfunc_whereami},
+    {"exit", sfunc_exit},
     {NULL, NULL}};
+
+
