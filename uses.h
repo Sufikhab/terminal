@@ -151,7 +151,6 @@ Command captian[] = {
     {"show", sfunc_show},
     {"ls", sfunc_ls},
     {"whereami", sfunc_whereami},
-    {"exit", sfunc_exit},
     {NULL, NULL}};
 
 
