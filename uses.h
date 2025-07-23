@@ -95,7 +95,7 @@ void sfunc_mkdir(char *args)
         printf("error:enter direntory name");
         return;
     }
-    if (mkdir(args) == 0)
+    if (mkdir(args,0777) == 0)
     {
         printf("directory '%s'created successfully\n", args);
     }
